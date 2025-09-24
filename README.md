@@ -67,7 +67,3 @@ The implementation uses C++ features like classes, `std::thread`, and `std::mute
 - **Cache Management**: A custom singly-linked list acts as the cache. A `std::mutex` (`cache_lock`) protects it from race conditions. When the cache is full, the least recently used element is evicted to make space.
 - **Networking**: Uses the Windows Sockets API (Winsock) for network communication.
 
-## Limitations
-- The server only supports the `GET` method. Other methods like `POST`, `PUT`, etc., will be rejected.
-- Thread management is basic (`std::thread::detach`). A more robust server would use a thread pool for better performance and resource management.
-- The current implementation does not support HTTPS requests.
